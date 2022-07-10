@@ -67,11 +67,52 @@ nav{
 .skecth div:first-child{
     width: 75%;
 }
-.skecth div:last-child{
-    width: 25%;
-}
+
 .skecth div:last-child img{
     width: 100%;
+}
+
+canvas {
+    border: 2px solid #000000;
+    cursor:pointer;
+}
+
+#right-container{
+    margin-left: 10px;
+}
+
+.bottone {
+    width: 70px;
+    height: 27px;
+    border: 1px solid #000000;
+    float: left;
+    margin: 5px 0;
+    cursor: pointer;
+}
+
+#controls {
+    display: flex;
+    flex-flow: column nowrap;
+    margin-top: 20px;
+}
+
+.clearer {
+    clear: both;
+}
+
+
+#buttonWhite {
+    background-color: white;
+    font-size: 18px;
+    text-align: center;
+}
+#bottoneCancella {
+    background-color: black;
+    color: white;
+    padding: 1px;
+    font-size: 16px;
+    text-align: center;
+    height: 35px;
 }
 
 footer{
