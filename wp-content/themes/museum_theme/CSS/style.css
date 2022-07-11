@@ -1,0 +1,135 @@
+header{
+    border-bottom: 1px solid black;
+}
+
+
+.title{
+    text-align: center;
+}
+
+nav{
+    min-height: 39px;
+    position: relative;
+}
+
+.menu-primary li{
+    float: left;
+    list-style-type: none;
+    min-height: 15px;
+}
+.menu-primary li a:link,
+.menu-primary li a:visited{
+    color: black;
+    text-decoration: none;
+    display: block;
+    padding: 2px 10px 0 6px;
+}
+
+
+.content-main{
+    padding-top: 2%;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+}
+
+.content-main .works{
+    width: 33%;
+}
+
+.content-main .works a:link,
+.content-main .works a:visited{
+    color: black;
+    text-decoration: none;
+}
+
+.single-work{
+    padding-top: 2%;
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+.single-work #venere{
+    width: 100%;
+}
+
+.skecth{
+    padding-top: 2%;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row;
+}
+
+.skecth div:first-child{
+    width: 75%;
+}
+
+.skecth div:last-child img{
+    width: 100%;
+}
+
+canvas {
+    border: 2px solid #000000;
+    cursor:pointer;
+}
+
+#right-container{
+    margin-left: 10px;
+}
+
+.bottone {
+    width: 70px;
+    height: 27px;
+    border: 1px solid #000000;
+    float: left;
+    margin: 5px 0;
+    cursor: pointer;
+}
+
+#controls {
+    display: flex;
+    flex-flow: column nowrap;
+    margin-top: 20px;
+}
+
+.clearer {
+    clear: both;
+}
+
+
+#buttonWhite {
+    background-color: white;
+    font-size: 18px;
+    text-align: center;
+}
+#bottoneCancella {
+    background-color: black;
+    color: white;
+    padding: 1px;
+    font-size: 16px;
+    text-align: center;
+    height: 35px;
+}
+
+footer{
+    border-top: 1px solid #0c0c0c ;
+    background-color: #a3a3a3;
+    text-align: center;
+}
+footer .auth{
+    font-size: 26px;
+}
+
+#profile-picture{
+    border-radius: 100px;
+}
+
+#footer a:link,
+#footer a:visited{
+    color: black;
+    text-decoration: none;
+}
