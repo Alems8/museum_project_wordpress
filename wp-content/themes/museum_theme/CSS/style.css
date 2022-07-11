@@ -1,3 +1,5 @@
+/*START Nav*/
+
 header{
     border-bottom: 1px solid black;
 }
@@ -25,7 +27,18 @@ nav{
     padding: 2px 10px 0 6px;
 }
 
+/*END Nav*/
 
+/*START HomePage*/
+.content-homepage{
+    padding-top: 2%;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+/*END HomePage*/
+
+/*START Works*/
 .content-main{
     padding-top: 2%;
     width: 90%;
@@ -44,6 +57,7 @@ nav{
     color: black;
     text-decoration: none;
 }
+/*END Works*/
 
 .single-work{
     padding-top: 2%;

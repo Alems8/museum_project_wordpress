@@ -6,7 +6,7 @@
 	<title><?php bloginfo('name');?></title>
 	<meta name="description" content="<?php bloginfo('description');?>">
 	<link href="<?php bloginfo('template_url')?>/CSS/style.css" rel="stylesheet" type="text/css">
-	<script src="<?php bloginfo('template_url')?> JS/drawing-desktop.js" type="text/javascript"></script>
+	<script src="<?php bloginfo('template_url')?> /JS/drawing-desktop.js" type="text/javascript"></script>
 </head>
 <body>
 <header>
