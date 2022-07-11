@@ -9,7 +9,7 @@
 	<script src="<?php bloginfo('template_url')?> /JS/drawing-desktop.js" type="text/javascript"></script>
 </head>
 <body>
-<header>
+<header id="museum-header">
 	<div class="title">
 		<h1>Gli Uffizi</h1>
 	</div>
@@ -25,10 +25,5 @@
 		}
 		?>
 
-		<!--		<ul class="menu-primary">-->
-		<!--			<li><a href="Home.html">Home</a> </li>-->
-		<!--			<li><a href="works.html">Le opere</a> </li>-->
-		<!--			<li><a href="contacts.html">Contatti</a></li>-->
-		<!--		</ul>-->
 	</nav>
 </header>
