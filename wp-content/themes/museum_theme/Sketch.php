@@ -1,7 +1,11 @@
 <!--
 Template Name: Sketch
 -->
-
+<!--//			$attachments = get_attached_media("image", $post->post_parent );-->
+<!--//            foreach($attachments as $attachment){-->
+<!--//                echo $attachment->ID;-->
+<!--//-->
+<!--//            }-->
 <?php get_header();?>
 
 	<div class="skecth">
@@ -9,10 +13,37 @@ Template Name: Sketch
 			<canvas id="areaDiDisegno" tabindex="0" ></canvas>
 		</div>
 		<div id="right-container">
-			<?php
-            echo get_post_thumbnail_id($post->post_parent);
-             wp_get_attachment_image(get_post_thumbnail_id($post->post_parent), 'work_size'); ?>
-			<div id="controls">
+            <?php
+                $page_id = get_queried_object_id();
+                $home_query = new WP_query(
+            	    array(
+            		    'post_type' => 'page',
+            		    'meta_key' => '_wp_page_template',
+            		    'meta_value' => 'Sketch.php'
+            	    )
+                );
+                if ($home_query->have_posts()){
+            	    while($home_query->have_posts()) : $home_query->the_post();
+            		    if ($home_query->post->ID == $page_id){
+            			    echo 'ziopera';
+            			    echo '/';
+            			    echo $home_query->post->ID;
+            			    echo '/';
+			                $attachments = get_attached_media("image", $page_id);
+			                foreach($attachments as $attachment){
+				                echo $attachment->ID;
+			                }
+            			    echo wp_get_attachment_image_src(get_post_thumbnail_id($home_query->post->ID));
+            			    break;
+            		    }
+            	    endwhile;
+                }
+
+
+
+            ?>
+
+            <div id="controls">
 				<label for="buttonColor">Scegli il colore</label>
 				<input id="buttonColor" class="bottone" type="color">
 				<label for="buttonSize">Scegli la dimensione</label>
@@ -40,3 +71,30 @@ Template Name: Sketch
 	</div>
 
 <?php get_footer();?>
+
+
+
+<!--//$page_id = get_queried_object_id();-->
+<!--//$home_query = new WP_query(-->
+<!--//	array(-->
+<!--//		'post_type' => 'page',-->
+<!--//		'meta_key' => '_wp_page_template',-->
+<!--//		'meta_value' => 'Sketch.php'-->
+<!--//	)-->
+<!--//);-->
+<!--//if ($home_query->have_posts()){-->
+<!--//	while($home_query->have_posts()) : $home_query->the_post();-->
+<!--//		if ($home_query->post->ID == $page_id){-->
+<!--//			echo 'ziopera';-->
+<!--//			echo '/';-->
+<!--//			echo $home_query->post->ID;-->
+<!--//			echo '/';-->
+<!--//			echo get_post_thumbnail_id($home_query->post->ID);-->
+<!--//-->
+<!--//			echo wp_get_attachment_image_src(get_post_thumbnail_id($home_query->post->ID));-->
+<!--//			break;-->
+<!--//		}-->
+<!--//	endwhile;-->
+<!--//}-->
+<!--//-->
+<!--//-->

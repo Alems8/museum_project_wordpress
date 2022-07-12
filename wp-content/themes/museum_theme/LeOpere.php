@@ -8,7 +8,7 @@ get_header();
 	$home_query = new WP_query(
 		array(
 			'post_status' => 'publish',
-			'cat' => 2,
+			'cat' => '2, 5',
 			'post_type' => 'post'
 
 		)
