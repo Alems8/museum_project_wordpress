@@ -44,6 +44,7 @@ Template Name: Sketch
 				<label for="buttonDetails">Scegli la trasparenza</label>
 				<input id="buttonDetails" class="bottone" type="range" min="0" max="100" value="100">
                 </div>
+                <div>
                 <label>Scegli il tratto</label>
                 <div id="buttonPen">
                     <label for="circle">Pennello</label>
@@ -52,7 +53,7 @@ Template Name: Sketch
 					<input id="square" type="radio" value="square" name="lineCap">
                     <label for="highlighter">Evidenziatore</label>
 					<input id="highlighter" type="radio" value="butt" name="lineCap">
-				</div>
+				</div></div>
 				<div id="buttonWhite" class="bottone">Gomma</div>
 				<div id="bottoneCancella" class="bottone">Cancella tutto</div>
 			</div>
@@ -62,5 +63,6 @@ Template Name: Sketch
 	<div class="social">
 		<p>Condividi sui social il tuo disegno!</p>
 	</div>
+
 
 <?php get_footer();?>

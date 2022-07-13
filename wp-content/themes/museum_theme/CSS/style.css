@@ -1,17 +1,31 @@
 /*START Nav*/
+*{
+    margin: 0;
+    padding: 0;
+}
 
 header{
+    padding-top: 25px;
     border-bottom: 1px solid black;
+}
+#museum-header{
+    background-image: url('../images/header.jpg');
+    width: 100%;
+    max-height: 100px;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 
 .title{
     text-align: center;
+color: white;
 }
 
 nav{
     min-height: 39px;
     position: relative;
+    margin-left: 10%;
 }
 
 .menu-primary li{
@@ -21,7 +35,7 @@ nav{
 }
 .menu-primary li a:link,
 .menu-primary li a:visited{
-    color: black;
+    color: white;
     text-decoration: none;
     display: block;
     padding: 2px 10px 0 6px;
@@ -49,6 +63,7 @@ nav{
 }
 
 .content-main .works{
+    width: 33%;
     max-height:500px;
     text-align: center;
 }
@@ -61,7 +76,6 @@ nav{
 .content-main .works a:link,
 .content-main .works a:visited{
     color: black;
-    text-decoration: blue;
 }
 
 .content-main .works a:hover{
@@ -120,7 +134,7 @@ nav{
     flex-flow: row;
 }
 
-.sketch div:first-child{
+#sketch-container{
     width: 75%;
 }
 
@@ -185,12 +199,15 @@ footer{
     border-top: 1px solid #0c0c0c ;
     background-color: #a3a3a3;
     text-align: center;
+    width: 100%;
 }
 footer .auth{
     font-size: 26px;
 }
 
 #profile-picture{
+    max-width: 140px;
+    max-height: 130px;
     border-radius: 100px;
 }
 
@@ -224,7 +241,7 @@ footer .auth{
     .sketch{
         flex-flow: column;
     }
-    .sketch div:first-child{
+    #sketch-container{
         width: 100%;
     }
     .sketch div:last-child img{
@@ -240,5 +257,17 @@ footer .auth{
     }
     #controls #buttonPen{
         display: contents;
+    }
+}
+
+@media screen and (max-width: 1100px){
+    .content-main .works{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 920px){
+    .content-main .works{
+        width: 100%;
     }
 }
