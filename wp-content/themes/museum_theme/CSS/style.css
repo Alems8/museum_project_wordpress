@@ -38,7 +38,7 @@ nav{
 }
 /*END HomePage*/
 
-/*START Works*/
+/*START LeOpere*/
 .content-main{
     padding-top: 2%;
     width: 90%;
@@ -49,28 +49,70 @@ nav{
 }
 
 .content-main .works{
-    width: 33%;
+    max-height:500px;
+    text-align: center;
+}
+
+.content-main .works img{
+    max-width: 90%;
+    max-height:400px;
 }
 
 .content-main .works a:link,
 .content-main .works a:visited{
     color: black;
-    text-decoration: none;
+    text-decoration: blue;
 }
-/*END Works*/
 
+.content-main .works a:hover{
+    background-color:grey;
+    color:white;
+}
+
+/*END LeOpere*/
+
+
+/*START Works*/
 .single-work{
     padding-top: 2%;
     width: 90%;
     margin: 0 auto;
 }
-
-
-.single-work #venere{
-    width: 100%;
+.single-work h2{
+    text-align: center;
 }
 
-.skecth{
+.single-work img{
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+.single-work #work-description{
+    position: relative;
+}
+
+#sketch-button{
+    position: absolute;
+    top: 1120px;
+    right: 0;
+    border: 2px solid black;
+    text-decoration: none;
+    cursor:pointer;
+    background-color: lightblue;
+}
+#sketch-button a:link,
+#sketch-button a:visited{
+    color: black;
+    text-decoration: none;
+    font-size:16px;
+}
+
+
+
+/*END Works*/
+
+/*START Sketch*/
+.sketch{
     padding-top: 2%;
     width: 90%;
     margin: 0 auto;
@@ -78,11 +120,11 @@ nav{
     flex-flow: row;
 }
 
-.skecth div:first-child{
+.sketch div:first-child{
     width: 75%;
 }
 
-.skecth div:last-child img{
+.sketch div:last-child img{
     width: 100%;
 }
 
@@ -93,6 +135,8 @@ canvas {
 
 #right-container{
     margin-left: 10px;
+    text-align: center;
+    width: 25%;
 }
 
 .bottone {
@@ -108,12 +152,16 @@ canvas {
     display: flex;
     flex-flow: column nowrap;
     margin-top: 20px;
+    text-align: left;
 }
 
-.clearer {
-    clear: both;
+#controls div{
+    display: grid;
+    margin: 4px 0;
 }
-
+#controls #buttonPen{
+    display: block;
+}
 
 #buttonWhite {
     background-color: white;
@@ -128,6 +176,10 @@ canvas {
     text-align: center;
     height: 35px;
 }
+
+/*END Sketch*/
+
+/*START Footer*/
 
 footer{
     border-top: 1px solid #0c0c0c ;
@@ -145,5 +197,48 @@ footer .auth{
 #footer a:link,
 #footer a:visited{
     color: black;
-    text-decoration: none;
+}
+
+/*END Footer*/
+
+
+/*START Mobile Instructions*/
+
+@media screen and (max-width: 1345px){
+    .content-homepage{
+        margin: 0;
+        width: 98%;
+    }
+    .content-main{
+        margin: 0;
+        width: 98%;
+    }
+    .sketch{
+        margin: 0;
+        width: 98%;
+    }
+
+}
+
+@media screen and (max-width: 1200px) {
+    .sketch{
+        flex-flow: column;
+    }
+    .sketch div:first-child{
+        width: 100%;
+    }
+    .sketch div:last-child img{
+        width: auto;
+    }
+    #right-container{
+        margin-left: 10px;
+        text-align: center;
+        width: 100%;
+    }
+    #controls{
+        flex-flow: row nowrap;
+    }
+    #controls #buttonPen{
+        display: contents;
+    }
 }
