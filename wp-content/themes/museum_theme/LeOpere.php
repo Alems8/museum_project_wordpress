@@ -19,8 +19,8 @@ get_header();
 			?>
 
             <div class="works">
-	            <?php wp_get_attachment_image(get_post_thumbnail_id($home_query->post->ID), 'post_size') ?>
-                <p><?php the_content();?></p>
+	            <?php echo wp_get_attachment_image(get_post_thumbnail_id($home_query->post->ID), 'post_size'); ?>
+                <p><?php echo wp_trim_words(get_post(get_post_thumbnail_id($home_query->post->ID))->post_content, 20); the_content();?> </p>
             </div>
 			<?php
 		}
@@ -28,5 +28,6 @@ get_header();
 	?>
 
 </div>
+
 
 <?php get_footer(); ?>

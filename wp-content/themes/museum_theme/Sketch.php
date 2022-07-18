@@ -18,13 +18,28 @@ Template Name: Sketch
             		    'meta_value' => 'Sketch.php'
             	    )
                 );
-                if ($home_query->have_posts()){
-            	    while($home_query->have_posts()) : $home_query->the_post();
-            		    if ($home_query->post->ID == $page_id){
-            			    the_content();
-            			    break;
-            		    }
-            	    endwhile;
+                $new_home_query = new WP_query(
+	                array(
+		                'post_status' => 'publish',
+		                'cat' => '2, 5',
+		                'post_type' => 'post'
+
+	                )
+                );
+                if ($home_query->have_posts() && $new_home_query->have_posts()){
+            	    while($home_query->have_posts()) {
+		                $home_query->the_post();
+		                if ( $home_query->post->ID == $page_id ) {
+			                $page_title = get_the_title($home_query->post->post_parent);
+			                while($new_home_query->have_posts()){
+				                $new_home_query->the_post();
+				                if ( strcmp(get_post(get_post_thumbnail_id($new_home_query->post->ID))->post_title , $page_title) == 0){
+					                echo wp_get_attachment_image( get_post_thumbnail_id( $new_home_query->post->ID ), 'sketch_size' );
+				                }
+			                }
+			                break;
+		                }
+	                }
                 }
 
 

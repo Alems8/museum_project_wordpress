@@ -1,7 +1,6 @@
 <?php get_header(); ?>
 
 <div class="content-homepage">
-
     <?php
         $home_query = new WP_query(
                 array(
