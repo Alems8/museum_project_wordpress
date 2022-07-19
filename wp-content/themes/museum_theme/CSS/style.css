@@ -4,9 +4,16 @@
     padding: 0;
 }
 
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
 header{
     padding-top: 25px;
     border-bottom: 1px solid black;
+    min-height: 25px;
 }
 #museum-header{
     background-image: url('../images/header.jpg');
@@ -107,7 +114,7 @@ nav{
 
 #sketch-button{
     position: absolute;
-    top: 1120px;
+    top: 0;
     right: 0;
     border: 2px solid black;
     text-decoration: none;
@@ -200,6 +207,8 @@ footer{
     background-color: #a3a3a3;
     text-align: center;
     width: 100%;
+    margin-top: auto;
+    min-height: 50px;
 }
 footer .auth{
     font-size: 26px;

@@ -19,6 +19,18 @@ if(function_exists('add_image_size')){
 	add_image_size('sketch_size', 350, 350);
 }
 
+function get_thumbnail_correct_size( int $post_thumbnail_id ): string {
+	$attachment_src = wp_get_attachment_image_src($post_thumbnail_id);
+	$width = $attachment_src[1];
+	$height = $attachment_src[2];
+	if ($width < $height){
+		return 'vertical';
+	}
+	else{
+		return 'horizontal';
+	}
+}
+
 add_filter('page_link', function( $permalink ) // Change to post_type_link for custom post type posts
 {
 	if (      $cat = get_queried_object()

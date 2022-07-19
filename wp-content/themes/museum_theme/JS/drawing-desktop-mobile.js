@@ -19,8 +19,8 @@ document.addEventListener('DOMContentLoaded', function(){
     context = canvas.getContext('2d');
     controls = document.getElementById('controls');
 
-    const canvasWidth = document.getElementById('sketch-container').offsetWidth;
-    const headerHeight = document.getElementById('museum-header').offsetHeight;
+    let canvasWidth = document.getElementById('sketch-container').offsetWidth;
+    let headerHeight = document.getElementById('museum-header').offsetHeight;
     canvas.width = canvasWidth - 100;
     canvas.height = window.innerHeight - headerHeight -70;
 
@@ -32,6 +32,9 @@ document.addEventListener('DOMContentLoaded', function(){
         }
         if (id === 'bottoneCancella'){
             cancella();
+        }
+        if(id === 'buttonColor'){
+            coloreSelezionato = e.target.value;
         }
     })
 
