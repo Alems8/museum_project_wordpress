@@ -1,3 +1,4 @@
+<?php wp_footer(); ?>
 <footer>
 	<div class="auth"><p>Autore</p></div>
 	<div><img src="<?php bloginfo('template_url')?>/images/Author.jpg" id="profile-picture"></div>

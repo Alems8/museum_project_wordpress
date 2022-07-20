@@ -11,6 +11,7 @@ Template Name: Sketch
 		<div id="right-container">
             <?php
                 $page_id = get_queried_object_id();
+                $attachment_image_id = null;
                 $home_query = new WP_query(
             	    array(
             		    'post_type' => 'page',
@@ -33,7 +34,8 @@ Template Name: Sketch
 			                $page_title = get_the_title($home_query->post->post_parent);
 			                while($new_home_query->have_posts()){
 				                $new_home_query->the_post();
-				                if ( strcmp(get_post(get_post_thumbnail_id($new_home_query->post->ID))->post_title , $page_title) == 0){
+                                $attachment_image_id = get_post_thumbnail_id($new_home_query->post->ID);
+				                if ( strcmp(get_post($attachment_image_id)->post_title , $page_title) == 0){
 					                echo wp_get_attachment_image( get_post_thumbnail_id( $new_home_query->post->ID ), 'sketch_size' );
 				                }
 			                }
@@ -72,11 +74,15 @@ Template Name: Sketch
 				<div id="buttonWhite" class="bottone">Gomma</div>
 				<div id="bottoneCancella" class="bottone">Cancella tutto</div>
 			</div>
+            <div id="sketch-image-description">
+                <?php echo get_post($attachment_image_id)->post_content?>
+            </div>
 		</div>
 	</div>
 
-	<div class="social">
+	<div id="social">
 		<p>Condividi sui social il tuo disegno!</p>
+		<p id="social-links"><?php echo do_shortcode('[DISPLAY_ULTIMATE_SOCIAL_ICONS]'); ?></p>
 	</div>
 
 

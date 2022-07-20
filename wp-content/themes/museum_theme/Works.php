@@ -52,9 +52,8 @@ Template Name: Works
                     if ( strcmp(get_post(get_post_thumbnail_id($new_home_query->post->ID))->post_title , $page_title) == 0){?>
 
                         <h2><?php echo get_post(get_post_thumbnail_id($new_home_query->post->ID))->post_title;?></h2>
-                        <?php echo wp_get_attachment_image(get_post_thumbnail_id($new_home_query->post->ID), 'work_size'); ?>
+                        <?php echo wp_get_attachment_image(get_post_thumbnail_id($new_home_query->post->ID), 'full'); ?>
                         <div id="work-description">
-                            <p ><?php echo get_post(get_post_thumbnail_id($new_home_query->post->ID))->post_excerpt;?></p>
                             <p><b>Descrizione:</b> <?php echo get_post(get_post_thumbnail_id($new_home_query->post->ID))->post_content;?></p>
 
 			    <?php
