@@ -6,7 +6,10 @@ Template Name: Sketch
 
 	<div class="sketch">
 		<div id="sketch-container">
-			<canvas id="areaDiDisegno" tabindex="0" ></canvas>
+			<div id="canvas-container"><canvas id="areaDiDisegno" tabindex="0" ></canvas>
+                <div id="back-image"></div>
+            </div>
+
 		</div>
 		<div id="right-container">
             <?php
@@ -36,8 +39,9 @@ Template Name: Sketch
 				                $new_home_query->the_post();
                                 $attachment_image_id = get_post_thumbnail_id($new_home_query->post->ID);
 				                if ( strcmp(get_post($attachment_image_id)->post_title , $page_title) == 0){
-					                echo wp_get_attachment_image( get_post_thumbnail_id( $new_home_query->post->ID ), 'sketch_size' );
-				                }
+
+					                 echo wp_get_attachment_image( get_post_thumbnail_id( $new_home_query->post->ID ), 'full' );
+				                 }
 			                }
 			                break;
 		                }

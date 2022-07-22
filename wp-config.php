@@ -58,7 +58,8 @@ define('LOGGED_IN_SALT',   'P%Bem07t|RqJ@;3I<M9_Gm<I[FT!auV3d//-GWC2>zi}jSHp;pjX
 define('NONCE_SALT',       'pn+7lCAG5Zrlmds}19kfy|fk.-e~yg{){Wcc6%{Zv;aS8:k+d_}g(WhYiHfHA@/1');
 
 /**#@-*/
-
+define( 'WP_HOME', 'http://localhost/museum_project_wordpress' );
+define( 'WP_SITEURL', 'http://localhost/museum_project_wordpress' );
 /**
  * WordPress database table prefix.
  *
