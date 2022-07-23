@@ -15,16 +15,28 @@ document.addEventListener('DOMContentLoaded', function() {
     works = document.getElementsByClassName('works');
 
     for (let i = 0; i<works.length;i++){
-        let currentimg = works[i].getElementsByTagName('img');
-        let currentimgw = currentimg[0].clientWidth;
-        let currentimgh = currentimg[0].clientHeight;
-        if (currentimgw > currentimgh){
-            currentimg[0].style.maxWidth = '90%';
-            currentimg[0].style.height = 'auto';
+        let currentImg = works[i].getElementsByTagName('img');
+        let currentImgW = currentImg[0].clientWidth;
+        let currentImgH = currentImg[0].clientHeight;
+        if (currentImgW > currentImgH){
+            if ((currentImgW-currentImgH) > 250){
+                currentImg[0].style.maxWidth = '90%';
+                currentImg[0].style.height = 'auto';
+            }
+            else{
+                currentImg[0].style.maxWidth ='90%';
+                currentImg[0].style.maxHeight ='90%';
+            }
         }
         else{
-            currentimg[0].style.maxHeight = '80%';
-            currentimg[0].style.width = 'auto';
+            if ((currentImgH-currentImgW) > 250){
+                currentImg[0].style.maxHeight = '80%';
+                currentImg[0].style.width = 'auto';
+            }
+            else{
+                currentImg[0].style.maxHeight = '80%';
+                currentImg[0].style.width = '80%';
+            }
         }
     }
 

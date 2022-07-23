@@ -66,6 +66,7 @@ nav{
     display: flex;
     flex-flow: row;
     flex-wrap: wrap;
+    padding-bottom: 50px;
 }
 
 .content-main .works{
@@ -233,6 +234,7 @@ footer{
     text-align: center;
     width: 100%;
     margin-top: auto;
+    padding-bottom: 10px;
 }
 footer .auth{
     font-size: 26px;
@@ -299,7 +301,7 @@ footer .auth{
     }
 }
 
-@media screen and (max-width: 920px){
+@media screen and (max-width: 600px){
     .content-main .works{
         width: 100%;
     }
